@@ -1,5 +1,5 @@
 class SkinsController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def new
     @skins = Skin.new
@@ -10,7 +10,7 @@ class SkinsController < ApplicationController
   end
 
   def create
-    @skins = PhotoPost.new(skins_params)
+    @skins = Skin.new(skins_params)
     @skins.user = current_user
     if @skins.save
       redirect_to skins_path
@@ -26,6 +26,6 @@ class SkinsController < ApplicationController
 
   private
   def skins_params
-    params.require(:skins).permit(:photo, :name, :description)
+    params.require(:skin).permit(:photo, :name, :description)
   end
 end
