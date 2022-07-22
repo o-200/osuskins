@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>mainpage</title>
+  </head>
+  <body>
+
+    
+
+    <div class="main">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center text-white">Hello, stranger!</h1>
+          <h4 class="text-center text-white">Welcome to my skin page! That's a list of skins, which im using.</h4>
+          <h4 class="text-center text-white">I hope to keep all of my skins on this archive-site.</h4>
+          <h6 class="text-center text-white">Sonelly, 30.06.2022</h6>
+          <br>
+          <div class="text-center">
+          <% unless user_signed_in? %>
+              <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-light' %>
+          <% end %>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <h4 class="text-center">Made by Sonelly.</h4>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
