@@ -1,8 +1,13 @@
-<h1>Upload Photo</h1>
-<%= bootstrap_form_for @skins, layout: :horizontal do |f| %>
+<div class="text-center text-white">
+  <h1>Upload Photo</h1>
+  <br>
+</div>
+<div class="container">
+  <%= bootstrap_form_for @skins, layout: :horizontal do |f| %>
     <%= f.alert_message 'Please fix the errors below.' %>
     <%= f.file_field :photo %>
     <%= f.text_field :name %>
     <%= f.text_area :description %>
     <%= f.submit 'Upload' %>
-<% end %>
+  <% end %>
+</div>

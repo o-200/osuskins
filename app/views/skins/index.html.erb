@@ -1,14 +1,20 @@
-<h1>Recent Posts</h1>
-<div class="row">
-  <% @skins.each do |post| %>
-      <div class="col-sm-4 col-md-3">
-        <%= link_to post, class: 'thumbnail' do %>
-          <%= image_tag post.photo_url(:thumb) %>
-          <div class="caption">
-            <h3><%= post.name %></h3>
-            <p>Photo by <%= post.user.email %></p>
-          </div>
-        <% end %>
+<h1><div class="text-center text-white">Recent Posts</div></h1>
+<br>
+<div class="container">
+  <div class="row row-cols-3 row-cols-md-3 g-4">
+    <% @skins.each do |post| %>
+      <div class="col">
+        <div class="card" style="width: 360px">
+          <%= link_to post, class: 'thumbnail' do %>
+            <img src="<%= post.photo_url(:thumb) %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= post.name %></h5>
+              <p><%= post.description %></p>
+              <a href="#" class="btn btn-primary">Download  </a>
+            </div>
+          <% end %>
+        </div>
       </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
