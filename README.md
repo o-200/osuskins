@@ -22,4 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-# ruby
+
+# requirements
+
+Check Gemfile for ruby and rails versions! Need Bundle and Imagemagick libraries for gem "minimagick"
