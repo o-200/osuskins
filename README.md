@@ -1,27 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Inspired by https://topoi-dev.github.io/topoi_skins/ 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+My mini-project was created to provide environments from game "osu!" with using "CRUD" Methods.
 
 # requirements
 
