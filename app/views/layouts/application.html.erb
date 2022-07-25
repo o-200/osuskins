@@ -14,17 +14,17 @@
   <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <%= link_to "Sonelly's skin.list", root_path, class: 'navbar-brand' %>
+          <%= link_to "Sonelly's skin.list", root_path, class: 'navbar-brand text-white' %>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <%= link_to "Home", root_path, class: 'nav-link active' %>
+                <%= link_to "Home", root_path, class: 'nav-link active text-white' %>
               </li>
               <li class="nav-item">
-                <%= link_to "Skin's list", skins_url, class: 'nav-link' %>
+                <%= link_to "Skin's list", skins_url, class: 'nav-link text-white' %>
               </li>
             </ul>
               <% if user_signed_in? %>
@@ -33,7 +33,7 @@
                   <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
                 </p>
               <% else %>
-                <li><%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %></li>
+                <%= link_to 'Sign in', new_user_session_path, class: 'nav-link text-white' %>
               <% end %>
             </span>
           </div>
@@ -42,7 +42,7 @@
     </header>
 
     <footer>
-      <h4 class="text-center">Made by Sonelly.</h4>
+      <h4 class="text-center text-white">Made by Sonelly.</h4>
     </footer>
     
     <%= yield %>

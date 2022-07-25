@@ -1,9 +1,4 @@
 
-:root {
-    --color1: #b5bdc8;
-    --color2: #28343b;
-}
-
 section {
     padding: 100px 0;
 }
@@ -13,13 +8,13 @@ header {
 }
 
 body, header {
-  background: #b5bdc8;
-background: -moz-linear-gradient(left,  #b5bdc8 0%, #828c95 36%, #28343b 100%);
-background: -webkit-linear-gradient(left,  #b5bdc8 0%,#828c95 36%,#28343b 100%);
-background: linear-gradient(to right,  #b5bdc8 0%,#828c95 36%,#28343b 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=1 );
-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  background: #343a40;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }   
+
+a {
+  text-decoration: none;
+}
 
 .main {
     margin: 0;
@@ -27,7 +22,7 @@ font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue"
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%) 
+    transform: translate(-50%, -50%);
 }
 
 footer {
@@ -38,3 +33,31 @@ footer {
   line-height: 60px;
 }
 
+.card-img-top {
+  text-decoration: none;
+}
+
+.card {
+  border: 2px solid rgba(0,0,0,.125);
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
+  background: #333;
+  color: #aaa;
+  
+}
+
+.card-title {
+  color: rgba(255, 255, 255, 0.747);
+}
+
+.description {
+  color: #aaa;
+}
+
+.bg-white, .border-white {
+  background-color: #fff !important;
+}
+
+.btn-secondary {
+  color: #333;
+  text-shadow: none;
+}
