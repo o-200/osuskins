@@ -5,10 +5,6 @@ class SkinsController < ApplicationController
     @skins = Skin.new
   end
 
-  def show
-    @skins = Skin.find params[:id]
-  end
-
   def create
     @skins = Skin.new(skins_params)
     @skins.user = current_user
@@ -22,8 +18,6 @@ class SkinsController < ApplicationController
   def index
     @skins = Skin.all
   end
-  
-
 
   private
   def skins_params
