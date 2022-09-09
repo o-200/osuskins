@@ -61,3 +61,15 @@ footer {
   color: #333;
   text-shadow: none;
 }
+
+.container {
+  padding: 20px;
+}
+
+.name, .desc {
+  border-bottom: 1px solid #ffffff56;
+}
+
+.admin {
+  border-bottom: 1px solid #ffffff56;
+}
