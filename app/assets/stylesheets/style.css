@@ -72,4 +72,9 @@ footer {
 
 .admin {
   border-bottom: 1px solid #ffffff56;
+  margin-top: 20px
+}
+
+.btn-secondary {
+  margin-bottom: 10px
 }

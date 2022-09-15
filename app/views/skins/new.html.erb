@@ -6,6 +6,7 @@
   <%= bootstrap_form_for @skins, layout: :horizontal do |f| %>
     <%= f.alert_message 'Please fix the errors below.' %>
     <%= f.file_field :photo %>
+    <%= f.file_field :file %>
     <%= f.text_field :name %>
     <%= f.text_area :description %>
     <%= f.submit 'Upload' %>

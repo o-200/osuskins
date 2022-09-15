@@ -47,6 +47,6 @@ class SkinsController < ApplicationController
   private
 
   def skins_params
-    params.require(:skin).permit(:photo, :name, :description)
+    params.require(:skin).permit(:photo, :file, :name, :description)
   end
 end
