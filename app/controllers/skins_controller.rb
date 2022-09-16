@@ -1,10 +1,10 @@
 class SkinsController < ApplicationController
-  # before_action :authenticate_user!  
+  # before_action :authenticate_user!
 
   def new
     @skins = Skin.new
   end
-  
+
   def edit
     @skins = Skin.find(params[:id])
   end
@@ -30,7 +30,7 @@ class SkinsController < ApplicationController
   end
 
   def show
-    @skins = Skin.find params[:id]
+    @skins = Skin.find(params[:id])
   end
 
   def index

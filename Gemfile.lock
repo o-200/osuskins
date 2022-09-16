@@ -252,7 +252,7 @@ DEPENDENCIES
   jsbundling-rails
   mini_magick
   puma (~> 5.0)
-  rails (~> 7.0.3)
+  rails
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
