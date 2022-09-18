@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style type="text/css" data-tag-name="trix-editor">trix-editor {
+  display: block;
+}
+
+trix-editor:empty:not(:focus)::before {
+  content: attr(placeholder);
+  color: graytext;
+  cursor: text;
+  pointer-events: none;
+}
+
+trix-editor a[contenteditable=false] {
+  cursor: text;
+}
+
+trix-editor img {
+  max-width: 100%;
+  height: auto;
+}
+
+trix-editor [data-trix-attachment] figcaption textarea {
+  resize: none;
+}
+
+trix-editor [data-trix-attachment] figcaption textarea.trix-autoresize-clone {
+  position: absolute;
+  left: -9999px;
+  max-height: 0px;
+}
+
+trix-editor [data-trix-attachment] figcaption[data-trix-placeholder]:empty::before {
+  content: attr(data-trix-placeholder);
+  color: graytext;
+}
+
+trix-editor [data-trix-cursor-target] {
+  display: inline-block !important;
+  width: 1px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+trix-editor [data-trix-cursor-target=left] {
+  vertical-align: top !important;
+  margin-left: -1px !important;
+}
+
+trix-editor [data-trix-cursor-target=right] {
+  vertical-align: bottom !important;
+  margin-right: -1px !important;
+}</style><style type="text/css" data-tag-name="trix-toolbar">trix-toolbar {
+  display: block;
+}
+
+trix-toolbar {
+  white-space: nowrap;
+}
+
+trix-toolbar [data-trix-dialog] {
+  display: none;
+}
+
+trix-toolbar [data-trix-dialog][data-trix-active] {
+  display: block;
+}
+
+trix-toolbar [data-trix-dialog] [data-trix-validate]:invalid {
+  background-color: #ffdddd;
+}</style><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 9999;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style>
+    
+    
+    
+
+    
+
+    <link rel="stylesheet" href="Server_files/application-d6621387afbaa9aeda81878a0cca16e410cbe7e45f668e6e.css" data-turbo-track="reload">
+    <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "/assets/application-a7fd3fc58be844f89656edec1ec73e18f9ab627e54b2aea67a97aad4613b6305.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-e5023178542f05fc063cd1dc5865457259cc01f3fba76a28454060d33de6f429.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-b8a9738499c7a8362910cd545375417370d72a9776fb4e766df7671484e2beb7.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js",
+    "trix": "/assets/trix-1563ff9c10f74e143b3ded40a8458497eaf2f87a648a5cbbfebdb7dec3447a5e.js",
+    "@rails/actiontext": "/assets/actiontext-28c61f5197c204db043317a8f8826a87ab31495b741f854d307ca36122deefce.js",
+    "controllers/application": "/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js",
+    "controllers/hello_controller": "/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js",
+    "controllers": "/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js"
+  }
+}</script>
+
+
+
+
+<script src="Server_files/es-module-shims.min-d89e73202ec09dede55fb74115af9c5f9f2bb9654.js" async="async" data-turbo-track="reload"></script>
+<script type="module">import "application"</script>
+
+    <title>Server</title><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="5h5A5ygsmmYdtG_wCNANNQs7-aunZVrTPOAT7onROGlUp_U9EKZOVqIxsCPEiVDHuUUO3ta6OSDi6E8ta_1XdA"><link rel="modulepreload" href="http://127.0.0.1:3000/assets/application-a7fd3fc58be844f89656edec1ec73e18f9ab627e54b2aea67a97aad4613b6305.js"><link rel="modulepreload" href="http://127.0.0.1:3000/assets/turbo.min-e5023178542f05fc063cd1dc5865457259cc01f3fba76a28454060d33de6f429.js"><link rel="modulepreload" href="http://127.0.0.1:3000/assets/stimulus.min-b8a9738499c7a8362910cd545375417370d72a9776fb4e766df7671484e2beb7.js"><link rel="modulepreload" href="http://127.0.0.1:3000/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js"></head><body><a class="nav-link text-white" href="http://127.0.0.1:3000/posts">Index Page</a>
+
+        <a class="nav-link text-white" href="http://127.0.0.1:3000/users/sign_in">Sign in</a>
+        <a class="nav-link text-white" href="http://127.0.0.1:3000/users/sign_up">Sign up</a>
+  
+
+  
+    <div class="container text-white">
+<h2>Sign up</h2>
+<form class="new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="l_twVoQTi78pyKLgSWeb3sCNYSRhBoFVAEZCTQUi2joUTHJSMhH0E0I23fpcSDQLrxfLf653dmmSmSTyIzY2Jw" autocomplete="off">
+  
+
+  <div class="field">
+    <p><label for="user_username">Username</label><br>
+    <input type="text" name="user[username]" id="user_username" value="o200"></p>
+  </div>
+
+  <div class="field">
+    <label for="user_email">Email</label><br>
+    <input autofocus="autofocus" autocomplete="email" type="email" value="omgout.2sssssssssssssssssssssssssssssssssssss0@gmail.com" name="user[email]" id="user_email">
+  </div>
+
+  <div class="field">
+    <label for="user_password">Password</label>
+    <em>(6 characters minimum)</em>
+    <br>
+    <input autocomplete="new-password" type="password" name="user[password]" id="user_password">
+  </div>
+
+
+  <div class="field">
+    <label for="user_password_confirmation">Password confirmation</label><br>
+    <input autocomplete="new-password" type="password" name="user[password_confirmation]" id="user_password_confirmation">
+  </div>
+
+  <div class="actions">
+    <input type="submit" name="commit" value="Sign up" data-disable-with="Sign up">
+  </div>
+</form></div>
+
+  
+
+</body></html>
