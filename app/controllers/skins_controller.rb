@@ -51,7 +51,6 @@ class SkinsController < ApplicationController
       :photo,
       :file,
       :name,
-      :description,
       :standart,
       :mania,
       :catch,

@@ -78,3 +78,12 @@ footer {
 .btn-secondary {
   margin-bottom: 10px
 }
+
+.mode {
+  margin-bottom: 10px solid #ffffff56;
+  margin-top: 10px solid #ffffff56;
+}
+
+.desc {
+  margin-bottom: 10px
+}

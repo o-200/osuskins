@@ -1,7 +1,7 @@
 <div class="content container">
   <div class="text-white">
     <div class="name row">
-      <div class="col-8 h2 ">
+      <div class="col-8 h2">
         <%= @skins.name %>
       </div>
       <div class="col-4">
@@ -15,34 +15,35 @@
           <%= image_tag @skins.photo_url, class: 'img-responsive', width: '720' %>
         </div>
         <div class="col-sm h4 text-light">
-          <div class="desc">
-            <p><%= @skins.description %></p>
+          <div class="stats">
+            sadsadsadasdasdasdasdas
+          </div>
+          <div class="mode">
+            <h6>modes</h6>
+            <% if @skins.standart? %>
+              <div class="btn btn-success">
+                standart
+              </div>
+            <% end %>
+            <% if @skins.taiko? %>
+              <div class="btn btn-success">
+                taiko
+              </div>
+            <% end %>
+            <% if @skins.mania? %>
+              <div class="btn btn-success">
+                mania
+              </div>
+            <% end %>
+            <% if @skins.catch? %>
+              <div class="btn btn-success">
+                catch
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
     </div>
-  <div class="mode">
-    <% if @skins.standart? %>
-      <div class="btn btn-success">
-        standart
-      </div>
-    <% end %>
-    <% if @skins.taiko? %>
-      <div class="btn btn-success">
-        taiko
-      </div>
-    <% end %>
-    <% if @skins.mania? %>
-      <div class="btn btn-success">
-        mania
-      </div>
-    <% end %>
-    <% if @skins.catch? %>
-      <div class="btn btn-success">
-        catch
-      </div>
-    <% end %>
-  </div>
   <div class="admin">
     <% if user_signed_in? %>
       <p><%= link_to "Edit", edit_skin_path(@skins) %></p>
