@@ -9,6 +9,13 @@
     <%= f.file_field :file %>
     <%= f.text_field :name %>
     <%= f.text_area :description %>
+
+    <div class="modes">
+      <%= f.check_box :standart %>
+      <%= f.check_box :mania %>
+      <%= f.check_box :taiko %>
+      <%= f.check_box :catch %>
+    </div>
     <%= f.submit 'Upload' %>
   <% end %>
 </div>
