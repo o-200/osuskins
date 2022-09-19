@@ -1,7 +1,12 @@
-<div class="content">
-  <div class="name text-white">
-    <div class="container h2">
-      <%= @skins.name %>
+<div class="content container">
+  <div class="text-white">
+    <div class="name row">
+      <div class="col-8 h2 ">
+        <%= @skins.name %>
+      </div>
+      <div class="col-4">
+        <%= button_to @skins.file.filename, url_for(@skins.file), class:"btn btn btn-success border-white bg-white dl-btn message-file" %>
+      </div>
     </div>
   </div>
   <div class="container">
@@ -12,17 +17,38 @@
         <div class="col-sm h4 text-light">
           <div class="desc">
             <p><%= @skins.description %></p>
-            <p><%= button_to @skins.file.filename, url_for(@skins.file), class:"btn btn-secondary border-white bg-white dl-btn message-file" %>
-          </div>
-          <div class="admin">
-            <% if user_signed_in? %>
-              <p><%= link_to "Edit", edit_skin_path(@skins) %></p>
-              <p><%= button_to "Destroy", @skins , method: :delete, data: { confirm: 'Are you sure?' } %></p>
-            <% end %>
           </div>
         </div>
       </div>
     </div>
+  <div class="mode">
+    <% if @skins.standart? %>
+      <div class="btn btn-success">
+        standart
+      </div>
+    <% end %>
+    <% if @skins.taiko? %>
+      <div class="btn btn-success">
+        taiko
+      </div>
+    <% end %>
+    <% if @skins.mania? %>
+      <div class="btn btn-success">
+        mania
+      </div>
+    <% end %>
+    <% if @skins.catch? %>
+      <div class="btn btn-success">
+        catch
+      </div>
+    <% end %>
+  </div>
+  <div class="admin">
+    <% if user_signed_in? %>
+      <p><%= link_to "Edit", edit_skin_path(@skins) %></p>
+      <p><%= button_to "Destroy", @skins , method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
+  </div>
 </div>
 
 
