@@ -87,3 +87,16 @@ footer {
 .desc {
   margin-bottom: 10px
 }
+
+.panel {
+  border-radius: 10px;
+  background-color:rgba(0, 0, 0, 0.2);
+}
+
+.photos {
+  border-radius: 10px;
+}
+
+.list-group-item {
+  background-color:#343a40
+}

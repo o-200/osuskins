@@ -1,45 +1,37 @@
 <div class="content container">
-  <div class="text-white">
-    <div class="name row">
-      <div class="col-8 h2">
-        <%= @skins.name %>
-      </div>
-      <div class="col-4">
-        <%= button_to @skins.file.filename, url_for(@skins.file), class:"btn btn btn-success border-white bg-white dl-btn message-file" %>
-      </div>
-    </div>
-  </div>
   <div class="container">
     <div class="row">
         <div class="col-sm">
-          <%= image_tag @skins.photo_url, class: 'img-responsive', width: '720' %>
+          <%= image_tag @skins.photo_url, class: 'img-responsive photos', width: '720' %>
         </div>
-        <div class="col-sm h4 text-light">
-          <div class="stats">
-            sadsadsadasdasdasdasdas
+        <div class="card panel col" style="width: 18rem;">
+          <div class="card-header">
+            info
           </div>
-          <div class="mode">
-            <h6>modes</h6>
+          <ul class="list-group list-group-flush panel">
+            <li class="list-group-item text-white"><%= @skins.name %></li>
             <% if @skins.standart? %>
-              <div class="btn btn-success">
-                standart
-              </div>
+              <li class="list-group-item text-white">standart</li>
             <% end %>
             <% if @skins.taiko? %>
-              <div class="btn btn-success">
-                taiko
-              </div>
+              <li class="list-group-item text-white">taiko</li>
             <% end %>
             <% if @skins.mania? %>
-              <div class="btn btn-success">
-                mania
-              </div>
+              <li class="list-group-item text-white">mania</li>
             <% end %>
             <% if @skins.catch? %>
-              <div class="btn btn-success">
-                catch
-              </div>
+              <li class="list-group-item text-white">catch</li>
             <% end %>
+          </ul>
+          <%= link_to @skins.file.filename, url_for(@skins.file), class:"btn btn btn-success dl-btn message-file" %>
+          <% if user_signed_in? %>
+            <div class="card-body">
+                <%= link_to "Edit", edit_skin_path(@skins), class:"card-link" %></p>
+                <%= button_to "Destroy", @skins , method: :delete, data: { confirm: 'Are you sure?' }, class:"card-link" %></p>
+            </div>
+          <% end %>
+          </div>
+        </div>
           </div>
         </div>
       </div>
@@ -51,5 +43,3 @@
     <% end %>
   </div>
 </div>
-
-
